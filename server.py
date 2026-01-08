@@ -80,7 +80,7 @@ async def download_document(relative_path: str, save_filename: str = None) -> st
         relative_path: The 'relative_path' returned from the search_adala tool (e.g., 'uploads/2024/04/01/filename.pdf').
         save_filename: Optional name to save the file as. If not provided, derives from the original filename.
     """
-    download_url = f"{BASE_URL}/{relative_path}"
+    download_url = f"{BASE_URL}/api/{relative_path}"
     
     # Create a 'downloads' directory if it doesn't exist
     os.makedirs("downloads", exist_ok=True)
